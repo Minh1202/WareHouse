@@ -1,0 +1,111 @@
+.testimonials {
+  background-color: $violet-color;
+  padding: 100px 90px;
+  border-radius: 50px;
+  margin-bottom: 150px;
+  position: relative;
+  &-title {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: $text-heading;
+    color: $white-color;
+    padding-bottom: 90px;
+  }
+  &-slide {
+    background-color: $white-color;
+    border-radius: 20px;
+    box-shadow: 0 0 10px $white-color;
+    position: relative;
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      gap: 0 40px;
+      &-image {
+        height: 100%;
+        width: 20%;
+        img {
+          height: 90px;
+          width: 90px;
+        }
+      }
+      &-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px 0;
+      }
+    }
+    .slick-prev {
+      position: absolute;
+      right: 35px;
+      bottom: -35px;
+    }
+    .slick-next {
+      position: absolute;
+      right: 0;
+      bottom: -35px;
+    }
+    .slick-arrow {
+      background-color: $violet-color;
+      border: none;
+      font-size: 20px;
+      color: $white-color;
+    }
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      bottom: -35px;
+      list-style-type: none;
+      gap: 0 10px;
+      button {
+        display: block;
+        width: 0.5rem;
+        height: 0.5rem;
+        border: none;
+        border-radius: 100%;
+        background-color: $white-color;
+        text-indent: -9999px;
+      }
+
+      li.slick-active button {
+        background-color: $pink-color;
+        width: 0.8rem;
+        height: 0.8rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .testimonials {
+    padding: 50px;
+
+    &-title {
+      padding-bottom: 50px;
+      text-align: center;
+    }
+
+    &-slide {
+      .item {
+        padding: 20px;
+        flex-direction: column;
+        &-image {
+          img {
+            object-fit: contain;
+          }
+        }
+
+        &-content {
+          align-items: center;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
