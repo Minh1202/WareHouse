@@ -53,6 +53,10 @@ body::-webkit-scrollbar-thumb {
   border-radius: 50px;
 }
 
+a {
+  color: #4b5d68;
+}
+
 .wrapper {
   max-width: 1600px;
   margin: 0 auto;
